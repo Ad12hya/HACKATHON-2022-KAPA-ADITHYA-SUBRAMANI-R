@@ -1,5 +1,5 @@
 import 'package:ccpc/screens/splash.dart';
-
+import 'package:ccpc/utils/constants.dart';
 import './screens/home.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +40,7 @@ class _AppState extends State<App> {
         '/': (context) => const Home(),
         '/splash': (context) => const Splash(),
       },
+      theme: ThemeData(primaryColor: colorWhite, textTheme: textThemeDefault),
       initialRoute: loading ? '/splash' : '/',
     );
   }
