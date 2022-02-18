@@ -21,7 +21,7 @@ class BoxIcon extends StatelessWidget {
       height: height,
       width: width,
       decoration: BoxDecoration(
-          color: color ?? colorWhite,
+          color: color ?? Theme.of(context).colorScheme.secondary,
           borderRadius: const BorderRadius.all(Radius.circular(15)),
           border: Border.all(color: colorGrey.withAlpha(40), width: 2)),
       padding: padding ?? const EdgeInsets.all(8),
