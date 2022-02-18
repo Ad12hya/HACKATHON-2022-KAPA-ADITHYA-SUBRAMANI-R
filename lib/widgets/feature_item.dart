@@ -41,7 +41,7 @@ class FeatureItem extends StatelessWidget {
         ),
         addVerticalSpace(5),
         Text(
-          itemData["description"],
+          itemData["shortDescription"],
           style: themeData.textTheme.subtitle1,
         )
       ]),

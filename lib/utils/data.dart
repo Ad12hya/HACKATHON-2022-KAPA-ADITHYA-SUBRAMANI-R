@@ -3,19 +3,83 @@ const ccpcFeatures = [
     "title": "Internships",
     "image": "assets/images/internship.jpg",
     "moreInfo": true,
-    "description": "Internships description"
+    "shortDescription": "Internships description",
+    "longDescription": """desc line 1
+    desc line 2""",
   },
   {
-    "title": "Webinars, seminars and workshops",
+    "title": "Webinars, seminars and workshops by experts",
     "image": "assets/images/seminar.jpg",
     "moreInfo": true,
-    "description": "Internships description"
+    "shortDescription": "Internships description",
+    "longDescription": """desc line 1
+    desc line 2""",
   },
   {
     "title": "Access to our corporate systems",
     "image": "assets/images/corporateSystem.jpg",
     "moreInfo": false,
-    "description": "Internships description"
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Industry and corporate exposure",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Career guidance",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "CV building assistance",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Interview preparation assistance",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Off-campus placement updates",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Job assistance",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Job oppotunities with us",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Industry visits",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Entrepreneurship support",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
+  },
+  {
+    "title": "Soft / Interpersonal / Life skills",
+    "image": "assets/images/corporateSystem.jpg",
+    "moreInfo": false,
+    "shortDescription": "Internships description",
   },
 ];
 

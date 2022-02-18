@@ -17,28 +17,87 @@ class Home extends StatelessWidget {
     final ThemeData themeData = Theme.of(context);
     return SafeArea(
         child: Scaffold(
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.grey.shade100,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'CCPC',
+                    style: themeData.textTheme.headline1,
+                  ),
+                  Text(
+                    "CONTINUOUS PROFESSIONAL DEVELOPMENT FOR STUDENTS",
+                    style: themeData.textTheme.subtitle1,
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              title: const Text('Item 1'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+            ListTile(
+              title: const Text('Item 2'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+          ],
+        ),
+      ),
       body: SizedBox(
         width: size.width,
         height: size.height,
         child: Stack(alignment: Alignment.center, children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               addVerticalSpace(padding),
               Padding(
                 padding: sidePadding,
                 child: Row(
-                  children: const [
-                    BoxIcon(
-                        child: Icon(
-                          Icons.notes_rounded,
-                          color: colorBlack,
-                        ),
-                        height: 50,
-                        width: 50)
+                  children: [
+                    Builder(builder: (context) {
+                      return InkResponse(
+                        onTap: () {
+                          Scaffold.of(context).openDrawer();
+                        },
+                        child: const BoxIcon(
+                            child: Icon(
+                              Icons.notes_rounded,
+                              color: colorBlack,
+                            ),
+                            height: 50,
+                            width: 50),
+                      );
+                    }),
                   ],
                 ),
               ),
               addVerticalSpace(padding),
+              Padding(
+                padding: sidePadding,
+                child: Text(
+                  "CCPC",
+                  style: themeData.textTheme.headline1,
+                ),
+              ),
+              addVerticalSpace(5),
               Expanded(
                 child: Padding(
                   padding: sidePadding,
@@ -50,10 +109,6 @@ class Home extends StatelessWidget {
                           return Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "CCPC",
-                                  style: themeData.textTheme.headline1,
-                                ),
                                 addVerticalSpace(padding),
                                 Text(
                                   "Cloud Counselage\nProfessional Community",
