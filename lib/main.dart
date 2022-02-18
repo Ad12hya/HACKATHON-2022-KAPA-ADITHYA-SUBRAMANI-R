@@ -40,7 +40,10 @@ class _AppState extends State<App> {
         '/': (context) => const Home(),
         '/splash': (context) => const Splash(),
       },
-      theme: ThemeData(primaryColor: colorWhite, textTheme: textThemeDefault),
+      theme: ThemeData(
+          primaryColor: colorWhite,
+          textTheme: textThemeDefault,
+          fontFamily: 'Montserrat'),
       initialRoute: loading ? '/splash' : '/',
     );
   }
