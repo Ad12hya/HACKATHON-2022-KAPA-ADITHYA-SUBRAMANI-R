@@ -20,10 +20,10 @@ class Home extends StatelessWidget {
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
+        // space to fit everything.a
         child: ListView(
           // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
+          // padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
@@ -43,20 +43,29 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-            ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
+            Column(children: [
+              addVerticalSpace(20),
+              ListTile(
+                leading: const Icon(Icons.question_answer_rounded),
+                title: const Text('FAQs'),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: const Icon(Icons.reviews_rounded),
+                title: const Text('Reviews'),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: const Icon(Icons.message_rounded),
+                title: const Text('Contact us'),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: const Icon(Icons.view_list_outlined),
+                title: const Text('Terms & Conditions'),
+                onTap: () {},
+              ),
+            ]),
           ],
         ),
       ),
