@@ -6,9 +6,9 @@ const colorDarkBlue = Color.fromRGBO(20, 25, 45, 1.0);
 const colorBlack = Color.fromRGBO(48, 47, 48, 1.0);
 const TextTheme textThemeDefault = TextTheme(
     headline1:
-        TextStyle(color: colorBlack, fontWeight: FontWeight.w700, fontSize: 32),
+        TextStyle(color: colorBlack, fontWeight: FontWeight.w700, fontSize: 40),
     headline2:
-        TextStyle(color: colorBlack, fontWeight: FontWeight.w700, fontSize: 22),
+        TextStyle(color: colorBlack, fontWeight: FontWeight.w400, fontSize: 26),
     headline3:
         TextStyle(color: colorBlack, fontWeight: FontWeight.w700, fontSize: 20),
     headline4:
@@ -28,6 +28,9 @@ const TextTheme textThemeDefault = TextTheme(
         fontWeight: FontWeight.w500,
         height: 1.5),
     subtitle1:
-        TextStyle(color: colorBlack, fontSize: 12, fontWeight: FontWeight.w400),
+        TextStyle(color: colorBlack, fontSize: 18, fontWeight: FontWeight.w400),
     subtitle2:
         TextStyle(color: colorGrey, fontSize: 12, fontWeight: FontWeight.w400));
+
+const eoiLink =
+    "https://www.cloudcounselage.com/iac/?utm_source=KAPA&utm_medium=hackathon_2022&utm_campaign=CloudCounselage";
