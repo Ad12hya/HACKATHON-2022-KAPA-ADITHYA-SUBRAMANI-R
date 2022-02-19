@@ -1,3 +1,4 @@
+import 'package:ccpc/screens/detail_page.dart';
 import 'package:ccpc/utils/data.dart';
 import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/providers/theme_provider.dart';
@@ -18,6 +19,9 @@ class Home extends StatelessWidget {
     const sidePadding = EdgeInsets.symmetric(horizontal: padding);
     final themeProvider = Provider.of<ThemeProvider>(context);
     return MaterialApp(
+      routes: {
+        DetailPage.routeName: (context) => const DetailPage(),
+      },
       themeMode: themeProvider.themeMode,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,

@@ -4,16 +4,15 @@ const ccpcFeatures = [
     "image": "assets/images/internship.jpg",
     "moreInfo": true,
     "shortDescription": "Equip yourself with new skills and opportunities",
-    "longDescription": """desc line 1
-    desc line 2""",
+    "longDescription": """hello""",
   },
   {
     "title": "Webinars, seminars and workshops by experts",
     "image": "assets/images/seminar.jpg",
     "moreInfo": true,
     "shortDescription": "Presentations and discussions led by experts",
-    "longDescription": """desc line 1
-    desc line 2""",
+    "longDescription":
+        """Cloud conselage conducts seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreomlreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreomlreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreomlreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom""",
   },
   {
     "title": "Access to our corporate systems",
