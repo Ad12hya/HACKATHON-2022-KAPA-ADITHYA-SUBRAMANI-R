@@ -1,9 +1,12 @@
 import 'package:ccpc/screens/detail_page.dart';
-import 'package:ccpc/utils/data.dart';
+import 'package:ccpc/screens/reviews.dart';
+import 'package:ccpc/screens/terms_and_conditions.dart';
+import 'package:ccpc/utils/ccpc_features.dart';
 import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/providers/theme_provider.dart';
 import 'package:ccpc/utils/widget_functions.dart';
 import 'package:ccpc/widgets/box_icon.dart';
+import 'package:ccpc/widgets/drawer.dart';
 import 'package:ccpc/widgets/feature_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -11,6 +14,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
+
+  static const routeName = '/';
 
   @override
   Widget build(BuildContext context) {
@@ -21,73 +26,15 @@ class Home extends StatelessWidget {
     return MaterialApp(
       routes: {
         DetailPage.routeName: (context) => const DetailPage(),
+        TermsAndConditions.routeName: (context) => const TermsAndConditions(),
+        Reviews.routeName: (context) => const Reviews()
       },
       themeMode: themeProvider.themeMode,
       theme: AppThemes.lightTheme,
       darkTheme: AppThemes.darkTheme,
       home: SafeArea(
           child: Scaffold(
-        drawer: Drawer(
-          // Add a ListView to the drawer. This ensures the user can scroll
-          // through the options in the drawer if there isn't enough vertical
-          // space to fit everything.a
-          child: ListView(
-            padding: const EdgeInsets.all(0),
-            // Important: Remove any padding from the ListView.
-            // padding: EdgeInsets.zero,
-            children: [
-              DrawerHeader(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      'CCPC',
-                      style: headline1,
-                    ),
-                    Text(
-                      "CONTINUOUS PROFESSIONAL DEVELOPMENT FOR STUDENTS",
-                      style: subtitle1,
-                    )
-                  ],
-                ),
-              ),
-              Column(children: [
-                addVerticalSpace(20),
-                Center(
-                  child: GestureDetector(
-                    child: Icon(themeProvider.isDarkMode
-                        ? Icons.light_mode
-                        : Icons.dark_mode),
-                    onTap: () {
-                      themeProvider.toggleTheme();
-                    },
-                  ),
-                ),
-                addVerticalSpace(20),
-                ListTile(
-                  leading: const Icon(Icons.question_answer_rounded),
-                  title: const Text('FAQs'),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: const Icon(Icons.reviews_rounded),
-                  title: const Text('Reviews'),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: const Icon(Icons.message_rounded),
-                  title: const Text('Contact us'),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: const Icon(Icons.view_list_outlined),
-                  title: const Text('Terms & Conditions'),
-                  onTap: () {},
-                ),
-              ]),
-            ],
-          ),
-        ),
+        drawer: const AppDrawer(),
         body: SizedBox(
           width: size.width,
           height: size.height,

@@ -19,7 +19,7 @@ const TextStyle headline5 =
 const TextStyle headline6 =
     TextStyle(fontWeight: FontWeight.w700, fontSize: 12);
 const TextStyle bodyText1 =
-    TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+    TextStyle(fontSize: 16, fontWeight: FontWeight.w500);
 const TextStyle bodyText2 =
     TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
 const TextStyle subtitle1 =
@@ -29,3 +29,11 @@ const TextStyle subtitle2 =
 
 const eoiLink =
     "https://www.cloudcounselage.com/iac/?utm_source=KAPA&utm_medium=hackathon_2022&utm_campaign=CloudCounselage";
+
+const cloudCounselageWebsiteReviews =
+    "https://www.cloudcounselage.com/ireviews/";
+const facebookReviews = "https://www.facebook.com/pg/CloudCounselage/reviews/";
+const glassdoorReviews =
+    "https://www.glassdoor.co.in/Reviews/Cloud-Counselage-Mumbai-Reviews-EI_IE1975055.0,16_IL.17,23_IM1070.htm";
+const googleReviews =
+    "https://www.google.com/search?q=cloud+counselage+google+reviews#lrd=0x3be7ce8f8b89a157:0x9adc8f2294703fc8,1,,,";
