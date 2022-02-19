@@ -1,4 +1,5 @@
 import 'package:ccpc/providers/theme_provider.dart';
+import 'package:ccpc/screens/detail_page.dart';
 import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/utils/widget_functions.dart';
 import 'package:ccpc/widgets/box_icon.dart';
@@ -24,15 +25,21 @@ class FeatureItem extends StatelessWidget {
               ? Positioned(
                   top: 10,
                   right: 10,
-                  child: BoxIcon(
-                    padding: const EdgeInsets.all(0),
-                    child: Icon(
-                      Icons.more_horiz_rounded,
-                      color: isDarkMode ? colorWhite : colorBlack,
-                      size: 35,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, DetailPage.routeName,
+                          arguments: {'dataItem': itemData});
+                    },
+                    child: BoxIcon(
+                      padding: const EdgeInsets.all(0),
+                      child: Icon(
+                        Icons.more_horiz_rounded,
+                        color: isDarkMode ? colorWhite : colorBlack,
+                        size: 35,
+                      ),
+                      height: 40,
+                      width: 40,
                     ),
-                    height: 40,
-                    width: 40,
                   ))
               : const SizedBox()
         ]),
