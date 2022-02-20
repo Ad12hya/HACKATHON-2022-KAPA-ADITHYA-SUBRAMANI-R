@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ccpc">
    <application
-        android:label="ccpc"
+        android:label="CCPC"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

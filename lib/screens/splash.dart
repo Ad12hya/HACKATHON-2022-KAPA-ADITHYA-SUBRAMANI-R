@@ -1,4 +1,6 @@
+import 'package:ccpc/utils/widget_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 // splash screen displayed while app starts
 
@@ -11,12 +13,18 @@ class Splash extends StatelessWidget {
         body: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Text("CCPC"),
+        children: [
+          LoadingAnimationWidget.threeRotatingDots(
+              color: Colors.blue.shade900, size: 100),
+          addVerticalSpace(100),
+          Text("CCPC",
+              style: TextStyle(
+                  color: Colors.blue.shade900,
+                  fontSize: 65,
+                  fontWeight: FontWeight.w700)),
           SizedBox(
             height: 30,
           ),
-          Text("netus et malesuada"),
         ],
       ),
     ));
