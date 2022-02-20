@@ -1,3 +1,4 @@
+import 'package:ccpc/data/links.dart';
 import 'package:ccpc/screens/detail_page.dart';
 import 'package:ccpc/screens/reviews.dart';
 import 'package:ccpc/screens/terms_and_conditions.dart';

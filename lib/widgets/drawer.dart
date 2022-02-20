@@ -1,3 +1,4 @@
+import 'package:ccpc/data/links.dart';
 import 'package:ccpc/providers/theme_provider.dart';
 import 'package:ccpc/screens/reviews.dart';
 import 'package:ccpc/screens/terms_and_conditions.dart';
@@ -5,6 +6,7 @@ import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/utils/widget_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -79,6 +81,22 @@ class AppDrawer extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacementNamed(
                     context, TermsAndConditions.routeName);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.info_rounded),
+              title: Row(
+                children: [
+                  const Text('Privacy Policy'),
+                  addHorizontalSpace(10),
+                  const Icon(
+                    Icons.open_in_new_rounded,
+                    size: 20,
+                  )
+                ],
+              ),
+              onTap: () async {
+                await launch(privacyPolicyLink);
               },
             ),
           ]),

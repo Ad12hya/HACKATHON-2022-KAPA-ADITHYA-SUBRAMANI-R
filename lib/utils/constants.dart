@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+// colors
 const colorWhite = Colors.white;
 const colorGrey = Color.fromRGBO(141, 141, 141, 1.0);
 const colorDarkBlue = Color.fromRGBO(20, 25, 45, 1.0);
 const colorBlack = Color.fromRGBO(48, 47, 48, 1.0);
 const colorLightYellow = Color.fromRGBO(218, 247, 166, 1);
 
+// text styles
 const TextStyle headline1 =
     TextStyle(fontWeight: FontWeight.w700, fontSize: 40);
 const TextStyle headline2 =
@@ -26,14 +28,3 @@ const TextStyle subtitle1 =
     TextStyle(fontSize: 18, fontWeight: FontWeight.w400);
 const TextStyle subtitle2 =
     TextStyle(fontSize: 12, fontWeight: FontWeight.w400);
-
-const eoiLink =
-    "https://www.cloudcounselage.com/iac/?utm_source=KAPA&utm_medium=hackathon_2022&utm_campaign=CloudCounselage";
-
-const cloudCounselageWebsiteReviews =
-    "https://www.cloudcounselage.com/ireviews/";
-const facebookReviews = "https://www.facebook.com/pg/CloudCounselage/reviews/";
-const glassdoorReviews =
-    "https://www.glassdoor.co.in/Reviews/Cloud-Counselage-Mumbai-Reviews-EI_IE1975055.0,16_IL.17,23_IM1070.htm";
-const googleReviews =
-    "https://www.google.com/search?q=cloud+counselage+google+reviews#lrd=0x3be7ce8f8b89a157:0x9adc8f2294703fc8,1,,,";
