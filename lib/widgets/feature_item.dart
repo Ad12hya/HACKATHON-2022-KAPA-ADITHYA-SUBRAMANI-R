@@ -20,7 +20,9 @@ class FeatureItem extends StatelessWidget {
         Stack(children: [
           ClipRRect(
               borderRadius: BorderRadius.circular(25),
-              child: Image.asset(itemData["image"])),
+              child: Hero(
+                  tag: itemData['image'],
+                  child: Image.asset(itemData["image"]))),
           itemData["moreInfo"]
               ? Positioned(
                   top: 10,
@@ -33,7 +35,7 @@ class FeatureItem extends StatelessWidget {
                     child: BoxIcon(
                       padding: const EdgeInsets.all(0),
                       child: Icon(
-                        Icons.more_horiz_rounded,
+                        Icons.keyboard_arrow_up_rounded,
                         color: isDarkMode ? colorWhite : colorBlack,
                         size: 35,
                       ),

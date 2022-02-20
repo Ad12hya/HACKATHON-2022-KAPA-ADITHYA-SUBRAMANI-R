@@ -35,27 +35,9 @@ class DetailPage extends StatelessWidget {
                   children: [
                     Stack(
                       children: [
-                        Image.asset(dataItem["image"]),
-                        Positioned(
-                            top: padding,
-                            child: Padding(
-                              padding: sidePadding,
-                              child: InkResponse(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                },
-                                child: BoxIcon(
-                                  child: Icon(
-                                    Icons.keyboard_backspace_rounded,
-                                    color: themeProvider.isDarkMode
-                                        ? colorWhite
-                                        : colorBlack,
-                                  ),
-                                  height: 50,
-                                  width: 50,
-                                ),
-                              ),
-                            ))
+                        Hero(
+                            tag: dataItem['image'],
+                            child: Image.asset(dataItem["image"])),
                       ],
                     ),
                     addVerticalSpace(padding),
@@ -79,6 +61,29 @@ class DetailPage extends StatelessWidget {
                   ],
                 ),
               ),
+              Positioned(
+                  top: padding,
+                  right: 5,
+                  child: Padding(
+                    padding: sidePadding,
+                    child: InkResponse(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: BoxIcon(
+                        padding: const EdgeInsets.all(0),
+                        child: Icon(
+                          Icons.keyboard_arrow_down_rounded,
+                          size: 35,
+                          color: themeProvider.isDarkMode
+                              ? colorWhite
+                              : colorBlack,
+                        ),
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                  )),
               Positioned(
                   bottom: 20,
                   child: ElevatedButton.icon(

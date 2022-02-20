@@ -4,7 +4,24 @@ const ccpcFeatures = [
     "image": "assets/images/benefits/internship.jpg",
     "moreInfo": true,
     "shortDescription": "Equip yourself with new skills and opportunities",
-    "longDescription": """hello""",
+    "longDescription":
+        """This is an online internship. This internship will last for 2 months. The students don't have to pay any fees for this internship.
+    
+    This is guaranteed internship for all the students in the age group of 17-24 years who aspire for IT career. There will be no interviews or aptitude test required for participating in this internship.
+    
+    You can choose to do an internship in any of the 16 technologies that we offer.
+    
+    To keep the internship focused and reduce the stress to the students we allow working on only one technology at a time. 
+    
+    There will be some basic training that you may refer to deliver a complete project. The duration of the training is one-two weeks. There will be trainings and project documentation templates that will be provided.
+    
+    During the internship, you have to deliver a real-world project along with project documentation.
+    
+    There will be appropriate instructions provided to deliver the task, there won't be any handholding. This is to enable you to operate in an industry standard environment.
+    
+    The interns who have successfully submitted the project, get an experience certificate. The interns who have performed exceptionally well and have delivered high-quality deliverables are provided with 'letter of appreciation' as well and are facilitated in the 'Internship Program Success Conclave'.
+
+Since Cloud Counselage is taking lot of efforts to help students become job-ready, we expect students to reciprocate to this initiative. The students are not benefited if they leave the internship incomplete. In case the students cannot complete the internship due to genuine reasons, they may enrol for the internship in the next academic year""",
   },
   {
     "title": "Webinars, seminars and workshops by experts",
@@ -12,7 +29,13 @@ const ccpcFeatures = [
     "moreInfo": true,
     "shortDescription": "Presentations and discussions led by experts",
     "longDescription":
-        """Cloud conselage conducts seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreomlreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreomlreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreomlreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom seminars lorem lreom""",
+        """The Workshops will be conducted to provide industry exposure on the latest technologies and develop the competencies/ professional skills for becoming job ready. These workshops will be delivered by the industry experts and would cover the importance of the technology/ skill, industry use cases, demo of a tool, career guidance and interaction with the experts.
+
+These workshops will be conducted online.
+
+These workshops are conducted every fortnight and since there would be live interaction with the industry experts, they are conducted at a fixed time. You may however, see the recorded events as per your convenience.
+
+As we are working with the student community to support them in their professional development, all the activities under CCPC are offered at no cost to students.""",
   },
   {
     "title": "Access to our corporate systems",
@@ -29,8 +52,14 @@ const ccpcFeatures = [
   {
     "title": "Career guidance",
     "image": "assets/images/benefits/careerGuidance.jpg",
-    "moreInfo": false,
+    "moreInfo": true,
     "shortDescription": "Make informed educational and occupational choices.",
+    "longDescription":
+        """Cloud Counselage conducts various webinars/ workshops every moth to help you get industry
+exposure about the technologies and develop professional skills. These workshops will help you to make career choices.
+Along with the webinar/ workshops, all the activities of CCPC will focus to build your career readiness
+competencies (as stated by NACE). WE will also be recommending tools, process and guidelines to
+develop your competencies. All these activities will help you to choose your career.""",
   },
   {
     "title": "CV building assistance",
