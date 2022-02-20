@@ -82,7 +82,8 @@ class TermsAndConditions extends StatelessWidget {
                       return Terms(index: index);
                     },
                   ),
-                ))
+                )),
+                addVerticalSpace(padding)
               ],
             ),
           ),

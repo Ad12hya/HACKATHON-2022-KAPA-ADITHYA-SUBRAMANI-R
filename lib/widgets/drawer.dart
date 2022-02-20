@@ -1,5 +1,6 @@
 import 'package:ccpc/data/links.dart';
 import 'package:ccpc/providers/theme_provider.dart';
+import 'package:ccpc/screens/cotanct_us.dart';
 import 'package:ccpc/screens/reviews.dart';
 import 'package:ccpc/screens/terms_and_conditions.dart';
 import 'package:ccpc/utils/constants.dart';
@@ -61,7 +62,9 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.question_answer_rounded),
               title: const Text('FAQs'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, '/faqs');
+              },
             ),
             ListTile(
               leading: const Icon(Icons.reviews_rounded),
@@ -73,7 +76,9 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.message_rounded),
               title: const Text('Contact us'),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushReplacementNamed(context, ContactUs.routeName);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.view_list_outlined),

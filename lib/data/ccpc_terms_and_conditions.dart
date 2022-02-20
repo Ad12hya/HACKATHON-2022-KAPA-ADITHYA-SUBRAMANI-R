@@ -236,13 +236,6 @@ U72200MH2015PTC261890 and our registered office is at Cloud Counselage Pvt. Ltd.
 Our principal place of business is at Cloud Counselage Pvt. Ltd., 91 Springboard, Godrej & Boyce
 Industry Estate, Gate No. 2, Plant No. 6, Opp. Vikhroli Bus Depot, Vikhroli - West, Mumbai - 400079,
 India
-You can contact us:
-By post, using the postal address given above and our ‘Contact Us’ webpage on our parent website;
-Cloud Counselage
-Using our website contact form
-By telephone, on the contact number published on our website from time to time
-By email, using the email address published on our website from time to time
-
 
 All rights reserved by Cloud Counselage Pvt. Ltd.""",
   },

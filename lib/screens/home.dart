@@ -1,5 +1,7 @@
 import 'package:ccpc/data/links.dart';
+import 'package:ccpc/screens/cotanct_us.dart';
 import 'package:ccpc/screens/detail_page.dart';
+import 'package:ccpc/screens/faqs.dart';
 import 'package:ccpc/screens/reviews.dart';
 import 'package:ccpc/screens/terms_and_conditions.dart';
 import 'package:ccpc/data/ccpc_features.dart';
@@ -28,7 +30,9 @@ class Home extends StatelessWidget {
       routes: {
         DetailPage.routeName: (context) => const DetailPage(),
         TermsAndConditions.routeName: (context) => const TermsAndConditions(),
-        Reviews.routeName: (context) => const Reviews()
+        Reviews.routeName: (context) => const Reviews(),
+        FAQs.routeName: (context) => const FAQs(),
+        ContactUs.routeName: (context) => const ContactUs(),
       },
       themeMode: themeProvider.themeMode,
       theme: AppThemes.lightTheme,
