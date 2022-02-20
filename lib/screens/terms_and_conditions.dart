@@ -1,6 +1,6 @@
 import 'package:ccpc/providers/theme_provider.dart';
 import 'package:ccpc/utils/constants.dart';
-import 'package:ccpc/utils/ccpc_terms_and_conditions.dart';
+import 'package:ccpc/data/ccpc_terms_and_conditions.dart';
 import 'package:ccpc/utils/widget_functions.dart';
 import 'package:ccpc/widgets/box_icon.dart';
 import 'package:ccpc/widgets/drawer.dart';

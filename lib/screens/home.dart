@@ -1,7 +1,7 @@
 import 'package:ccpc/screens/detail_page.dart';
 import 'package:ccpc/screens/reviews.dart';
 import 'package:ccpc/screens/terms_and_conditions.dart';
-import 'package:ccpc/utils/ccpc_features.dart';
+import 'package:ccpc/data/ccpc_features.dart';
 import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/providers/theme_provider.dart';
 import 'package:ccpc/utils/widget_functions.dart';

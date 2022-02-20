@@ -1,5 +1,5 @@
 import 'package:ccpc/providers/theme_provider.dart';
-import 'package:ccpc/utils/ccpc_reviews.dart';
+import 'package:ccpc/data/ccpc_reviews.dart';
 import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/utils/widget_functions.dart';
 import 'package:ccpc/widgets/box_icon.dart';
@@ -16,9 +16,9 @@ class Reviews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final themeProvider = Provider.of<ThemeProvider>(context);
     const double padding = 25;
     const sidePadding = EdgeInsets.symmetric(horizontal: padding);
-    final themeProvider = Provider.of<ThemeProvider>(context);
     return SafeArea(
       child: Scaffold(
         body: SizedBox(
@@ -92,6 +92,10 @@ class Reviews extends StatelessWidget {
                                     children: [
                                       ElevatedButton(
                                           style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30)),
                                               minimumSize: const Size(150, 50)),
                                           onPressed: () async {
                                             await launch(
@@ -101,6 +105,10 @@ class Reviews extends StatelessWidget {
                                               const Text("Cloud Counselage")),
                                       ElevatedButton(
                                           style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30)),
                                               minimumSize: const Size(150, 50)),
                                           onPressed: () async {
                                             await launch(facebookReviews);
@@ -115,13 +123,21 @@ class Reviews extends StatelessWidget {
                                     children: [
                                       ElevatedButton(
                                           style: ElevatedButton.styleFrom(
-                                              minimumSize: const Size(150, 50)),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30)),
+                                            minimumSize: const Size(150, 50),
+                                          ),
                                           onPressed: () async {
                                             await launch(glassdoorReviews);
                                           },
                                           child: const Text("Glassdoor")),
                                       ElevatedButton(
                                           style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          30)),
                                               minimumSize: const Size(150, 50)),
                                           onPressed: () async {
                                             await launch(googleReviews);
@@ -149,6 +165,8 @@ class ReviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    const double padding = 25;
+    const sidePadding = EdgeInsets.symmetric(horizontal: padding);
     return Container(
       width: size.width * 0.8,
       height: size.height * 0.75,
@@ -157,34 +175,32 @@ class ReviewCard extends StatelessWidget {
           color: Theme.of(context).colorScheme.secondary,
           borderRadius: const BorderRadius.all(Radius.circular(15)),
           border: Border.all(color: colorGrey.withAlpha(40), width: 2)),
-      child: Expanded(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            scrollDirection: Axis.vertical,
-            child: Column(children: [
-              addVerticalSpace(10),
-              Text(
-                reviewItem["name"],
-                style: headline2,
-                textAlign: TextAlign.center,
-              ),
-              addVerticalSpace(20),
-              Text(
-                reviewItem["featuredText"],
-                style: headline4,
-                textAlign: TextAlign.center,
-              ),
-              addVerticalSpace(10),
-              Text(
-                reviewItem["content"],
-                style: bodyText1,
-              ),
-              addVerticalSpace(25)
-            ]),
+      child: SingleChildScrollView(
+        padding: sidePadding,
+        physics: const BouncingScrollPhysics(),
+        scrollDirection: Axis.vertical,
+        child: Column(children: [
+          addVerticalSpace(10),
+          ClipOval(child: Image.asset(reviewItem["image"])),
+          addVerticalSpace(10),
+          Text(
+            reviewItem["name"],
+            style: headline2,
+            textAlign: TextAlign.center,
           ),
-        ),
+          addVerticalSpace(20),
+          Text(
+            reviewItem["featuredText"],
+            style: headline4,
+            textAlign: TextAlign.center,
+          ),
+          addVerticalSpace(10),
+          Text(
+            reviewItem["content"],
+            style: bodyText1,
+          ),
+          addVerticalSpace(25)
+        ]),
       ),
     );
   }
