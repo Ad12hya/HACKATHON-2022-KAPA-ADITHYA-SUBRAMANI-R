@@ -146,7 +146,8 @@ class _FormBodyState extends State<FormBody> {
                                 toastPosition: EasyLoadingToastPosition.bottom);
                             final prefs = await SharedPreferences.getInstance();
                             await prefs.setBool('alreadyFilledForm', true);
-                            await FirestoreDatabase(FirebaseFirestore.instance)
+                            bool res = await FirestoreDatabase(
+                                    FirebaseFirestore.instance)
                                 .addRecord(
                                     name: name,
                                     email: email,
@@ -154,12 +155,22 @@ class _FormBodyState extends State<FormBody> {
                                     interests: interests,
                                     college: college,
                                     careerAspirations: careerAspirations);
-                            EasyLoading.showToast("Done!",
-                                duration: Duration(milliseconds: 1000),
-                                dismissOnTap: true,
-                                maskType: EasyLoadingMaskType.none,
-                                toastPosition: EasyLoadingToastPosition.bottom);
-                            Navigator.pop(context);
+                            if (res) {
+                              EasyLoading.showToast("Done!",
+                                  duration: Duration(milliseconds: 1000),
+                                  dismissOnTap: true,
+                                  maskType: EasyLoadingMaskType.none,
+                                  toastPosition:
+                                      EasyLoadingToastPosition.bottom);
+                              Navigator.pop(context);
+                            } else {
+                              EasyLoading.showToast("Something went wrong",
+                                  duration: Duration(milliseconds: 1000),
+                                  dismissOnTap: true,
+                                  maskType: EasyLoadingMaskType.none,
+                                  toastPosition:
+                                      EasyLoadingToastPosition.bottom);
+                            }
                           } else {
                             EasyLoading.showToast('Enter valid details',
                                 maskType: EasyLoadingMaskType.none,
