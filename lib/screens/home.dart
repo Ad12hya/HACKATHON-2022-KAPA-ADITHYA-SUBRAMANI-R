@@ -1,9 +1,5 @@
 import 'package:ccpc/data/links.dart';
-import 'package:ccpc/screens/cotanct_us.dart';
-import 'package:ccpc/screens/detail_page.dart';
-import 'package:ccpc/screens/faqs.dart';
-import 'package:ccpc/screens/reviews.dart';
-import 'package:ccpc/screens/terms_and_conditions.dart';
+import 'package:ccpc/screens/interests_form.dart';
 import 'package:ccpc/data/ccpc_features.dart';
 import 'package:ccpc/utils/constants.dart';
 import 'package:ccpc/providers/theme_provider.dart';
@@ -26,118 +22,118 @@ class Home extends StatelessWidget {
     const double padding = 25;
     const sidePadding = EdgeInsets.symmetric(horizontal: padding);
     final themeProvider = Provider.of<ThemeProvider>(context);
-    return MaterialApp(
-      routes: {
-        DetailPage.routeName: (context) => const DetailPage(),
-        TermsAndConditions.routeName: (context) => const TermsAndConditions(),
-        Reviews.routeName: (context) => const Reviews(),
-        FAQs.routeName: (context) => const FAQs(),
-        ContactUs.routeName: (context) => const ContactUs(),
-      },
-      themeMode: themeProvider.themeMode,
-      theme: AppThemes.lightTheme,
-      darkTheme: AppThemes.darkTheme,
-      home: SafeArea(
-          child: Scaffold(
-        drawer: const AppDrawer(),
-        body: SizedBox(
-          width: size.width,
-          height: size.height,
-          child: Stack(alignment: Alignment.center, children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                addVerticalSpace(padding),
-                Padding(
-                  padding: sidePadding,
-                  child: Row(
-                    children: [
-                      Builder(builder: (context) {
-                        return InkResponse(
-                          onTap: () {
-                            Scaffold.of(context).openDrawer();
-                          },
-                          child: BoxIcon(
-                              child: Icon(
-                                Icons.notes_rounded,
-                                color: themeProvider.isDarkMode
-                                    ? colorWhite
-                                    : colorBlack,
-                              ),
-                              height: 50,
-                              width: 50),
-                        );
-                      }),
-                    ],
-                  ),
+    return SafeArea(
+        child: Scaffold(
+      drawer: const AppDrawer(),
+      body: SizedBox(
+        width: size.width,
+        height: size.height,
+        child: Stack(alignment: Alignment.center, children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              addVerticalSpace(padding),
+              Padding(
+                padding: sidePadding,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Builder(builder: (context) {
+                      return InkResponse(
+                        onTap: () {
+                          Scaffold.of(context).openDrawer();
+                        },
+                        child: BoxIcon(
+                            child: Icon(
+                              Icons.notes_rounded,
+                              color: themeProvider.isDarkMode
+                                  ? colorWhite
+                                  : colorBlack,
+                            ),
+                            height: 50,
+                            width: 50),
+                      );
+                    }),
+                    Builder(builder: (context) {
+                      return ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushNamed(InterestForm.routeName);
+                        },
+                        child: Icon(Icons.person_add_alt_rounded),
+                        style: ElevatedButton.styleFrom(
+                            shape: CircleBorder(), minimumSize: Size(50, 50)),
+                      );
+                    }),
+                  ],
                 ),
-                addVerticalSpace(padding),
-                const Padding(
-                  padding: sidePadding,
-                  child: Text(
-                    "CCPC",
-                    style: headline1,
-                  ),
+              ),
+              addVerticalSpace(padding),
+              const Padding(
+                padding: sidePadding,
+                child: Text(
+                  "CCPC",
+                  style: headline1,
                 ),
-                addVerticalSpace(5),
-                Expanded(
-                  child: Padding(
-                    padding: sidePadding,
-                    child: ListView.builder(
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: ccpcFeatures.length,
-                        itemBuilder: (context, index) {
-                          if (index == 0) {
-                            return Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  addVerticalSpace(padding),
-                                  const Text(
-                                    "Cloud Counselage\nProfessional Community",
-                                    style: headline2,
-                                  ),
-                                  const Divider(
-                                    height: padding,
-                                    color: colorGrey,
-                                  ),
-                                  FeatureItem(itemData: ccpcFeatures[index])
-                                ]);
-                          }
-                          if (index == ccpcFeatures.length - 1) {
-                            return Column(
+              ),
+              addVerticalSpace(5),
+              Expanded(
+                child: Padding(
+                  padding: sidePadding,
+                  child: ListView.builder(
+                      physics: const BouncingScrollPhysics(),
+                      itemCount: ccpcFeatures.length,
+                      itemBuilder: (context, index) {
+                        if (index == 0) {
+                          return Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                FeatureItem(itemData: ccpcFeatures[index]),
-                                addVerticalSpace(100)
-                              ],
-                            );
-                          }
-                          return FeatureItem(itemData: ccpcFeatures[index]);
-                        }),
-                  ),
+                                addVerticalSpace(padding),
+                                const Text(
+                                  "Cloud Counselage\nProfessional Community",
+                                  style: headline2,
+                                ),
+                                const Divider(
+                                  height: padding,
+                                  color: colorGrey,
+                                ),
+                                FeatureItem(itemData: ccpcFeatures[index])
+                              ]);
+                        }
+                        if (index == ccpcFeatures.length - 1) {
+                          return Column(
+                            children: [
+                              FeatureItem(itemData: ccpcFeatures[index]),
+                              addVerticalSpace(100)
+                            ],
+                          );
+                        }
+                        return FeatureItem(itemData: ccpcFeatures[index]);
+                      }),
                 ),
-              ],
-            ),
-            // express interest button
-            Positioned(
-                bottom: 20,
-                child: ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.all(16),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20))),
-                  onPressed: () async {
-                    if (!await launch(eoiLink)) throw 'Could not launch';
-                  },
-                  icon: const Icon(
-                    Icons.favorite_rounded,
-                    size: 30,
-                  ),
-                  label: const Text("Express interest",
-                      style: TextStyle(fontSize: 20)),
-                ))
-          ]),
-        ),
-      )),
-    );
+              ),
+            ],
+          ),
+          // express interest button
+          Positioned(
+              bottom: 20,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.all(16),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                onPressed: () async {
+                  if (!await launch(eoiLink)) throw 'Could not launch';
+                },
+                icon: const Icon(
+                  Icons.favorite_rounded,
+                  size: 30,
+                ),
+                label: const Text("Express interest",
+                    style: TextStyle(fontSize: 20)),
+              ))
+        ]),
+      ),
+    ));
   }
 }
