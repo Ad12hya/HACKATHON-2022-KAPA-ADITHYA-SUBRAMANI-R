@@ -1,4 +1,4 @@
-import 'package:ccpc/screens/cotanct_us.dart';
+import 'package:ccpc/screens/contact_us.dart';
 import 'package:ccpc/screens/detail_page.dart';
 import 'package:ccpc/screens/faqs.dart';
 import 'package:ccpc/screens/home.dart';

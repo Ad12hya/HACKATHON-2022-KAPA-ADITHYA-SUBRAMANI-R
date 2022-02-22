@@ -6,6 +6,7 @@ import 'package:ccpc/utils/widget_functions.dart';
 import 'package:ccpc/widgets/box_icon.dart';
 import 'package:ccpc/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -93,6 +94,7 @@ class Reviews extends StatelessWidget {
                                     children: [
                                       ElevatedButton(
                                           style: ElevatedButton.styleFrom(
+                                              primary: Color(0xffed7524),
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -104,17 +106,21 @@ class Reviews extends StatelessWidget {
                                           },
                                           child:
                                               const Text("Cloud Counselage")),
-                                      ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          30)),
-                                              minimumSize: const Size(150, 50)),
-                                          onPressed: () async {
-                                            await launch(facebookReviews);
-                                          },
-                                          child: const Text("Facebook"))
+                                      ElevatedButton.icon(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Color(0xff395899),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30)),
+                                            minimumSize: const Size(150, 50)),
+                                        onPressed: () async {
+                                          await launch(facebookReviews);
+                                        },
+                                        label: Text("Facebook"),
+                                        icon: Icon(
+                                          FontAwesomeIcons.facebookF,
+                                        ),
+                                      )
                                     ],
                                   ),
                                   addVerticalSpace(30),
@@ -122,19 +128,9 @@ class Reviews extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceEvenly,
                                     children: [
-                                      ElevatedButton(
+                                      ElevatedButton.icon(
                                           style: ElevatedButton.styleFrom(
-                                            shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(30)),
-                                            minimumSize: const Size(150, 50),
-                                          ),
-                                          onPressed: () async {
-                                            await launch(glassdoorReviews);
-                                          },
-                                          child: const Text("Glassdoor")),
-                                      ElevatedButton(
-                                          style: ElevatedButton.styleFrom(
+                                              primary: Color(0xffdd4b39),
                                               shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(
@@ -143,7 +139,20 @@ class Reviews extends StatelessWidget {
                                           onPressed: () async {
                                             await launch(googleReviews);
                                           },
-                                          child: const Text("Google"))
+                                          icon: Icon(FontAwesomeIcons.google),
+                                          label: const Text("Google")),
+                                      ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                            primary: Color(0xff0caa41),
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(30)),
+                                            minimumSize: const Size(150, 50),
+                                          ),
+                                          onPressed: () async {
+                                            await launch(glassdoorReviews);
+                                          },
+                                          child: const Text("glassdoor"))
                                     ],
                                   ),
                                   addVerticalSpace(30),

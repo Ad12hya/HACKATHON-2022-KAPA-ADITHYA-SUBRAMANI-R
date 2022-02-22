@@ -13,3 +13,10 @@ const googleReviews =
 
 // privacy policy
 const privacyPolicyLink = "https://bit.ly/3BclNM0";
+
+// social media links
+const instagram = 'https://www.instagram.com/cloudcounselage/';
+const linkedIn = 'https://www.linkedin.com/company/cloud-counselage/';
+const facebook = 'https://www.facebook.com/CloudCounselage/';
+const telegram = 'https://t.me/+h1Je2dRX9NZkZTM1';
+const supportMail = 'Industry-Academia@cloudcounselage.com';

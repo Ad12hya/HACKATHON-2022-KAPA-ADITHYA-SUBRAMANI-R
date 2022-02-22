@@ -1,6 +1,6 @@
 import 'package:ccpc/data/links.dart';
 import 'package:ccpc/providers/theme_provider.dart';
-import 'package:ccpc/screens/cotanct_us.dart';
+import 'package:ccpc/screens/contact_us.dart';
 import 'package:ccpc/screens/reviews.dart';
 import 'package:ccpc/screens/terms_and_conditions.dart';
 import 'package:ccpc/utils/constants.dart';
