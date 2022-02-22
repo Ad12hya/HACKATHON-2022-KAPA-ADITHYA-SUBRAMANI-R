@@ -23,7 +23,7 @@ class _InterestFormState extends State<InterestForm> {
   void getPrefs() async {
     final prefs = await SharedPreferences.getInstance();
     bool? temp = prefs.getBool('alreadyFilledForm');
-    if (temp != null) {
+    if (temp != null && temp) {
       setState(() {
         alreadyFilled = true;
       });
@@ -92,6 +92,15 @@ class _InterestFormState extends State<InterestForm> {
                       ],
                     ),
                   ),
+                  addVerticalSpace(padding),
+                  alreadyFilled
+                      ? Padding(
+                          padding: sidePadding,
+                          child: BoxIcon(
+                              child: Text(
+                                  "Note: You have already filled the form once")),
+                        )
+                      : SizedBox(),
                   addVerticalSpace(padding),
                   FormBody(),
                   addVerticalSpace(padding)
