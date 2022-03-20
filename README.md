@@ -1,4 +1,4 @@
-## Hackathon 2022  - Team **KAPA**
+## Hackathon 2022-Team ""KAPA""
 
 ### Team Captain: [Adithya Subramani R](https://github.com/Ad12hya)
 
